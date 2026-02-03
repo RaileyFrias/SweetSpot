@@ -1,16 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>For You</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Spot - Philippians 1:3</title>
     <style>
-        body { text-align: center; font-family: 'Arial', sans-serif; background: #fff0f5; padding-top: 50px; }
-        h1 { color: #d02090; }
-        .heart { color: red; font-size: 50px; }
+        /* General Setup */
+        body {
+            background-color: #8E2F2B; /* Deep Red Background */
+            color: #E7D3D0;            /* Soft Cream Font */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Georgia', serif; /* Classic look */
+            overflow: hidden;
+        }
+
+        /* Content Container */
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Verse Style: Cursive and Italic */
+        .verse-text {
+            font-family: 'Brush Script MT', cursive; 
+            font-style: italic;
+            font-size: 2.5rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        /* Reference Style */
+        .reference {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Logo Positioning - Lower Right */
+        .logo {
+            position: absolute;
+            bottom: 30px;
+            
+            width: 120px; /* Adjust size as needed */
+            height: auto;
+            opacity: 0.9;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .verse-text { font-size: 1.8rem; }
+            .logo { width: 80px; bottom: 20px; right: 20px; }
+        }
     </style>
 </head>
 <body>
-    <div class="heart">❤️</div>
-    <h1>Happy Valentine's Day!</h1>
-    <p>I built this site just for you.</p>
+
+    <div class="container">
+        <div class="reference">Philippians 1:3</div>
+        <div class="verse-text">
+            “I thank my God every time I remember you.”
+        </div>
+    </div>
+
+    <img src="logo.png" alt="Sweet Spot Logo" class="logo">
+
 </body>
 </html>
