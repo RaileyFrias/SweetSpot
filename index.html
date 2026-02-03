@@ -7,54 +7,61 @@
     <style>
         /* General Setup */
         body {
-            background-color: #8E2F2B; /* Deep Red Background */
-            color: #E7D3D0;            /* Soft Cream Font */
+            background-color: #8E2F2B; /* Deep Red */
+            color: #E7D3D0;            /* Soft Cream */
             margin: 0;
             padding: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Stacks items vertically */
+            justify-content: center; 
             align-items: center;
-            font-family: 'Georgia', serif; /* Classic look */
-            overflow: hidden;
+            font-family: 'Georgia', serif;
+            text-align: center;
         }
 
         /* Content Container */
         .container {
-            text-align: center;
             padding: 20px;
+            flex: 1; /* Sasakop ng space para itulak ang logo pababa */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        /* Verse Style: Cursive and Italic */
         .verse-text {
             font-family: 'Brush Script MT', cursive; 
             font-style: italic;
             font-size: 2.5rem;
             line-height: 1.4;
-            margin-bottom: 10px;
+            margin-top: 10px;
         }
 
-        /* Reference Style */
         .reference {
             font-size: 1.2rem;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
 
-        /* Logo Positioning - Lower Right */
+        /* Logo Styling - Responsive & Centered */
+        .logo-container {
+            padding-bottom: 40px; /* Space mula sa bottom ng screen */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
         .logo {
-            position: absolute;
-            bottom: 30px;
-            
-            width: 120px; /* Adjust size as needed */
+            width: 120px; /* Size for Desktop */
             height: auto;
             opacity: 0.9;
         }
 
-        /* Mobile Responsive */
+        /* Mobile Specific Adjustments */
         @media (max-width: 600px) {
             .verse-text { font-size: 1.8rem; }
-            .logo { width: 80px; bottom: 20px; right: 20px; }
+            .reference { font-size: 1rem; }
+            .logo { width: 90px; } /* Slightly smaller on phones */
         }
     </style>
 </head>
@@ -67,7 +74,9 @@
         </div>
     </div>
 
-    <img src="logo.png" alt="Sweet Spot Logo" class="logo">
+    <div class="logo-container">
+        <img src="logo.png" alt="Sweet Spot Logo" class="logo">
+    </div>
 
 </body>
 </html>
